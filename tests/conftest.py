@@ -3,7 +3,7 @@ from pytest import fixture
 from config import Config
 
 
-def pytest_addoption(parser):
+def pytest_addoption(parser):  # think of 'parser' is like a secret fixture provided - its the ~ argparse object
     parser.addoption(
         "--env", 
         action="store",
@@ -12,7 +12,10 @@ def pytest_addoption(parser):
 
 
 @fixture(scope='session')
-def env(request):
+def env(request):  # 'request' --- like a secret fixture again, to get some configurations (or something else) from pytest.
+    # pytest --env=qa 
+    # pytest --env qa
+    # pytest --env="qa"
     return request.config.getoption("--env")
 
 
