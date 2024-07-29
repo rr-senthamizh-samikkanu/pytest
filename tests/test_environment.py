@@ -1,3 +1,7 @@
+# from pytest import mark
+
+# @mark.skip(reason="broken or skipped coz ....")  # to skip the test  # pytest -rxXs 
+# @mark.xfail(reason="broken or skipped coz ....")  # you expect this to fail
 def test_environment_is_qa(app_config):
     base_url = app_config.base_url
     port = app_config.app_port
