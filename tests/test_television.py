@@ -1,6 +1,8 @@
 from pytest import mark
 
-
+# parametrize: it's a specail mark keyword; unlike 'smoke,' 'ui' which are custom marks.
+# for every parameter, the test runs that many times
+# here we are coupleing the data with the test though; there's a better way;
 @mark.parametrize('tv_brand', [
         ('Samsung'),
         ('Sony'),
