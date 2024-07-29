@@ -5,6 +5,11 @@ import time
 # pytest -s-v -n4 (4 threads for n)
 # if there's dependency on different tst, don't use this. only for isolated 100% tests
 # -nauto (automatically detects)
+
+# I/O bound problems - where we are waiting on something -- multiple threads in one process should do for paralleism
+# CPU bound probles - where the slowness due to computation/complexity -- multiple processes for parallelism
+# see screenshots in this foler for the it.
+
 def test_result_1_completes_as_expected():
     time.sleep(5)
     print("Result 1 has completed")
