@@ -1,3 +1,8 @@
+#whitebox testing - meaning we have access to the source code, and running the test in the same repo
+#blackbox - you are testing someelse code/service that you don't have source code access
+# tests directory is outside of the bundle/installable module (titlecase) 
+# - so others don't have to downlaod it as part of their testing
+
 NON_CAPS = [
         'a',
         'an',
