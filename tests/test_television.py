@@ -2,13 +2,14 @@ from pytest import mark
 
 # parametrize: it's a specail mark keyword; unlike 'smoke,' 'ui' which are custom marks.
 # for every parameter, the test runs that many times
-# here we are coupleing the data with the test though; there's a better way; -- via fixture (see: tv_brand_from_fixture test case)
+# here we are coupling the data with the test though; there's a better way; -- via fixture (see: tv_brand_from_fixture test case)
 @mark.parametrize('tv_brand', [
-        ('Samsung'),
+        ('Samsung'), # reason for tuple is we can send in multiple attributes if needed
         ('Sony'),
         ('Vizio')
     ]
 )
+# @mark.skip
 def test_television_turns_on(tv_brand):
     print(f"{tv_brand} turns on as expected")
 
